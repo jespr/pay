@@ -36,7 +36,7 @@ module Pay
       update(amount_refunded: amount)
     end
 
-    if defined?(Receipts::Receipt) && required_receipt_attributes?
+    if defined?(Receipts::Receipt)
       def receipt
         Receipts::Receipt.new(
           id: id,
