@@ -4,7 +4,6 @@ module Pay
       @user, @charge = user, charge
 
       attachments[charge.filename] = charge.receipt.render
-
       mail(
         to: to(user),
         subject: Pay.email_receipt_subject,
